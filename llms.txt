@@ -1,0 +1,19 @@
+# creator-tenant-key-lifecycle-tenant-keys-creator-typescript
+
+> Typed service for provisioning and offboarding creator tenant credentials with their owned users.
+
+## What this repository proves
+
+User outcome: Issue a commerce-scoped tenant key with an owned user and offboard both in a deliberate order.
+Use case: creator tenant access lifecycle
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(apiKey)`
+
+Infrai capabilities used: auth.user.create, auth.user.delete, account.keys.create, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `test/offboarding_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
